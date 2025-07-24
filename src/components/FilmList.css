@@ -1,0 +1,142 @@
+.ant-table {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #0f0f0f !important;
+  color: #e0e0e0 !important;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: #121212 !important;
+  color: #cfcfcf !important;
+}
+
+.ant-btn-primary {
+  background-color: #121212 !important;
+  border-color: #3a3a3a !important;
+  color: #00bcd4 !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+  color: #121212 !important;
+}
+
+.ant-btn-dangerous {
+  background-color: #b00020 !important;
+  border-color: #b00020 !important;
+  color: #fff !important;
+}
+
+.ant-btn-dangerous:hover,
+.ant-btn-dangerous:focus {
+  background-color: #ff1744 !important;
+  border-color: #ff1744 !important;
+  color: #121212 !important;
+}
+.ant-table {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #0f0f0f !important;
+  color: #e0e0e0 !important;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: #121212 !important;
+  color: #cfcfcf !important;
+}
+
+.ant-btn-primary {
+  background-color: #121212 !important;
+  border-color: #3a3a3a !important;
+  color: #00bcd4 !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+  color: #121212 !important;
+}
+
+.ant-btn-dangerous,
+.ant-btn-danger {
+  background-color: #b00020 !important;
+  border-color: #b00020 !important;
+  color: #fff !important;
+}
+
+.ant-btn-dangerous:hover,
+.ant-btn-dangerous:focus,
+.ant-btn-danger:hover,
+.ant-btn-danger:focus {
+  background-color: #ff1744 !important;
+  border-color: #ff1744 !important;
+  color: #121212 !important;
+}
+
+.ant-form {
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+  color: #e0e0e0;
+}
+
+.ant-form-item-label > label {
+  color: #00bcd4 !important;
+  font-weight: 600;
+}
+
+
+.ant-input,
+.ant-input-number,
+.ant-picker {
+  background-color: #1e1e1e;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+}
+
+.ant-input:hover,
+.ant-input:focus,
+.ant-input-number:hover,
+.ant-input-number:focus,
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px #00bcd4;
+  color: #e0e0e0;
+}
+
+.ant-input::placeholder,
+.ant-input-number input::placeholder {
+  color: #888;
+}
+
+.ant-input-textarea {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #3a3a3a;
+}
+
+.ant-input-textarea:hover,
+.ant-input-textarea:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+.ant-form-item-explain {
+  color: #ff1744 !important;
+}
+
+h2 {
+  color: #00bcd4;
+  text-shadow: 0 0 5px #00bcd4;
+}

@@ -1,0 +1,123 @@
+.create-session-card {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.create-session-label {
+  color: #ffffff !important;
+}
+
+.create-session-select .ant-select-selector {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #555 !important;
+}
+
+.create-session-date .ant-picker {
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: #ffffff;
+}
+
+.create-session-date input {
+  color: #ffffff !important;
+}
+
+.create-session-button {
+  background-color: #1677ff;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.create-session-button:hover {
+  background-color: #4096ff !important;
+}
+
+body, #root {
+  background-color: #121212;
+  color: #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create-session-card, .ant-card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #ddd !important;
+}
+
+.ant-card-head-title, .create-session-label {
+  color: #eee !important;
+  font-weight: 600;
+}
+
+.ant-select-selector, 
+.ant-picker {
+  background-color: #2c2c2c !important;
+  color: #ddd !important;
+  border-color: #444 !important;
+}
+
+.ant-select-selection-item, 
+.ant-picker-input > input {
+  color: #ddd !important;
+}
+
+.ant-select-selector:hover, 
+.ant-picker:hover {
+  border-color: #666 !important;
+}
+
+.create-session-button, 
+.ant-btn-primary {
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+  color: white !important;
+  font-weight: 700;
+}
+
+.create-session-button:hover, 
+.ant-btn-primary:hover {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+.ant-list {
+  background-color: #1e1e1e !important;
+  color: #ddd !important;
+  border-color: #333 !important;
+}
+
+.ant-list-item {
+  border-bottom: 1px solid #333 !important;
+  color: #ddd !important;
+}
+
+.ant-form-item-explain-error {
+  color: #ff4d4f !important;
+}
+
+.ant-list {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #222;
+}
+
+.ant-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-list::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.ant-list::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 3px;
+}
+
+.ant-picker-input > input::placeholder,
+.ant-select-selection-placeholder {
+  color: #aaa !important;
+}
