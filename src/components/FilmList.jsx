@@ -3,6 +3,7 @@ import { Table, Button, Popconfirm, Space, Modal, Form, Input, DatePicker, Input
 import NewFilm from './NewFilm';
 import "./FilmList.css";
 import moment from 'moment';
+import { useFavorites } from '../contexts/favorite.context';
 
 const { TextArea } = Input;
 
@@ -11,7 +12,8 @@ const FilmList = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [editingFilm, setEditingFilm] = useState(null);
   const [form] = Form.useForm();
-  const [favorites, setFavorites] = useState(new Set());
+  
+  const { favorites, isFavorite, toggleFavorite } = useFavorites();
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=20d6f218c2d5b5050875849f0c4a2233&language=uk-UA&page=1")
@@ -25,17 +27,6 @@ const FilmList = () => {
 
   const handleDelete = (key) => {
     setData(prev => prev.filter(item => item.key !== key));
-    setFavorites(prev => {
-      const newSet = new Set(prev);
-      newSet.delete(key);
-      return newSet;
-    });
-  };
-
-  const handleEditFilm = (updatedFilm) => {
-    setData(prevData =>
-      prevData.map(film => (film.key === updatedFilm.key ? updatedFilm : film))
-    );
   };
 
   const handleAddFilm = (film) => {
@@ -78,17 +69,6 @@ const FilmList = () => {
 
     setData(prev => prev.map(film => (film.key === updatedFilm.key ? updatedFilm : film)));
     handleCancel();
-  };
-  const toggleFavorite = (key) => {
-    setFavorites(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(key)) {
-        newSet.delete(key);
-      } else {
-        newSet.add(key);
-      }
-      return newSet;
-    });
   };
 
   const columns = [
@@ -145,13 +125,13 @@ const FilmList = () => {
       title: 'Улюблене',
       key: 'favorite',
       render: (_, record) => {
-        const isFav = favorites.has(record.key);
+        const fav = isFavorite(record.key);
         return (
           <Button
-            type={isFav ? "primary" : "default"}
+            type={fav ? "primary" : "default"}
             onClick={() => toggleFavorite(record.key)}
           >
-            {isFav ? "Улюблений" : "В улюблені"}
+            {fav ? "Улюблений" : "В улюблені"}
           </Button>
         );
       }
@@ -180,7 +160,7 @@ const FilmList = () => {
       <h2 style={{ textAlign: 'center', marginBottom: 24 }}>
         Список фільмів &nbsp; 
         <span style={{ color: '#00bcd4' }}>
-          (Улюблених: {favorites.size})
+          (Улюблених: {favorites.length})
         </span>
       </h2>
       <NewFilm onAddFilm={handleAddFilm} />
